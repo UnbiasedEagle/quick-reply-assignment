@@ -5,11 +5,12 @@ interface CellProps {
   type: 'number' | 'line';
   success: boolean;
   number: string;
+  onClick: () => void;
 }
 
-export const Cell = ({ success, number, type }: CellProps) => {
+export const Cell = ({ success, number, type, onClick }: CellProps) => {
   const cellClassNames = cn(
-    'flex items-center justify-center h-7 w-7 rounded-full text-white',
+    'flex items-center outline-none justify-center h-7 w-7 rounded-full text-white',
     {
       'bg-success': success,
       'bg-neutral': !success,
@@ -25,13 +26,13 @@ export const Cell = ({ success, number, type }: CellProps) => {
 
   return (
     <div className='flex relative flex-col items-center'>
-      <div className={cellClassNames}>
+      <button onClick={onClick} className={cellClassNames}>
         {success ? (
           <Check className='text-base' />
         ) : (
           <span className='text-sm'>{number}</span>
         )}
-      </div>
+      </button>
       <span className={stepClassNames}>Step</span>
     </div>
   );

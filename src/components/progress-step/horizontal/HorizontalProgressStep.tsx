@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Cell } from '../Cell';
 import { ProgressStepLine } from '../ProgressLine';
 import { ProgressStepDescription } from '../ProgressStepDescription';
@@ -7,6 +8,7 @@ interface HorizontalProgressStepProps {
   position: 'start' | 'middle' | 'end';
   stepName: string;
   description?: string;
+  onClick: () => void;
 }
 
 export const HorizontalProgressStep = ({
@@ -14,6 +16,7 @@ export const HorizontalProgressStep = ({
   position,
   stepName,
   description,
+  onClick,
 }: HorizontalProgressStepProps) => {
   return (
     <div className='inline-flex items-center'>
@@ -22,7 +25,12 @@ export const HorizontalProgressStep = ({
       )}
 
       <div className='mx-1 flex relative flex-col items-center'>
-        <Cell type='number' number={stepName} success={success} />
+        <Cell
+          onClick={onClick}
+          type='number'
+          number={stepName}
+          success={success}
+        />
         {description && (
           <ProgressStepDescription
             className='absolute -bottom-12'

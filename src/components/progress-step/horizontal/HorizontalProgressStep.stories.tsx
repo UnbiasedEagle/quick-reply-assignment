@@ -1,8 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { HorizontalProgressStep } from './HorizontalProgressStep';
+import { fn } from '@storybook/test';
 
 const meta: Meta<typeof HorizontalProgressStep> = {
   component: HorizontalProgressStep,
+  args: { onClick: fn() },
   decorators: [
     (Story) => (
       <div className='flex items-center justify-center min-h-screen'>
