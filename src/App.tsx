@@ -1,5 +1,3 @@
-import { HorizontalProgressStep } from './components/progress-step/horizontal/HorizontalProgressStep';
-import { VerticalProgressStep } from './components/progress-step/vertical/VerticalProgressStep';
 import { HorizontalProgressSteps } from './examples/horizontal-progress-steps/HorizontalProgressSteps';
 import { VerticalProgressSteps } from './examples/vertical-progress-steps/VerticalProgressSteps';
 import { ProgressStep } from './types';
@@ -27,21 +25,9 @@ const progressSteps: ProgressStep[] = [
 
 const App = () => {
   return (
-    <div className='text-center p-4'>
+    <div className='p-4 text-center'>
       <h1 className='text-3xl font-bold'>QuickReply.ai Assignment</h1>
-      <div className='flex flex-col gap-20 justify-center items-center mt-10'>
-        {/* <VerticalProgressStep
-          description='In vertical layout, the current step may have description'
-          success={false}
-          line={true}
-          stepName='1'
-        />
-        <HorizontalProgressStep
-          description='Description'
-          position='middle'
-          stepName='2'
-          success={true}
-        /> */}
+      <div className='flex flex-col items-center justify-center gap-20 mt-10'>
         <HorizontalProgressSteps steps={progressSteps} />
         <VerticalProgressSteps steps={progressSteps} />
       </div>

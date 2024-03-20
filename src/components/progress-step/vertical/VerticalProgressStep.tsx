@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Cell } from '../Cell';
 import { ProgressStepLine } from '../ProgressLine';
 import { ProgressStepDescription } from '../ProgressStepDescription';
@@ -19,8 +18,8 @@ export const VerticalProgressStep = ({
   onClick,
 }: VerticalProgressStepProps) => {
   return (
-    <div className='flex relative flex-col items-center'>
-      <div className='my-1 relative'>
+    <div className='relative flex flex-col items-center'>
+      <div className='relative my-1'>
         <Cell
           onClick={onClick}
           type='line'
