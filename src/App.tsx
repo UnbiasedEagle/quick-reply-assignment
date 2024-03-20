@@ -1,5 +1,5 @@
-import { HorizontalProgressStep } from './components/progress-step/horizontal/ProgressStep';
-import { VerticalProgressStep } from './components/progress-step/vertical/ProgressStep';
+import { HorizontalProgressStep } from './components/progress-step/horizontal/HorizontalProgressStep';
+import { VerticalProgressStep } from './components/progress-step/vertical/VerticalProgressStep';
 
 const App = () => {
   return (
@@ -8,7 +8,7 @@ const App = () => {
       <div className='flex flex-col gap-10 justify-center items-center mt-10'>
         <VerticalProgressStep
           description='In vertical layout, the current step may have description'
-          success={true}
+          success={false}
           line={true}
           stepName='1'
         />

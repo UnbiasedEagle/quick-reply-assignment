@@ -21,7 +21,7 @@ export const VerticalProgressStep = ({
         <Cell type='line' number={stepName} success={success} />
         {description && (
           <ProgressStepDescription
-            className='absolute w-64 text-left left-12'
+            className='absolute w-64 text-left left-11'
             description={description}
           />
         )}
