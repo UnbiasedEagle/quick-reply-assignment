@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { HorizontalProgressSteps } from './HorizontalProgressSteps';
+import { progressSteps } from '../../data';
 
 const meta: Meta<typeof HorizontalProgressSteps> = {
   component: HorizontalProgressSteps,
@@ -18,25 +19,6 @@ type Story = StoryObj<typeof HorizontalProgressSteps>;
 
 export const Default: Story = {
   args: {
-    steps: [
-      {
-        id: 1,
-        stepName: '1',
-        success: false,
-        description: 'Passed',
-      },
-      {
-        id: 2,
-        stepName: '2',
-        success: false,
-        description: 'Current',
-      },
-      {
-        id: 3,
-        stepName: '3',
-        success: false,
-        description: 'Ahead',
-      },
-    ],
+    steps: progressSteps,
   },
 };
